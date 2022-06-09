@@ -1,0 +1,35 @@
+.item {
+  border-right: 1px solid rgb(161, 161, 161);
+  border-left: 1px solid rgb(161, 161, 161);
+  border-bottom: 1px solid rgb(161, 161, 161);
+  padding: 10px 10px;
+  .item-style {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    .item-name-style {
+      font-weight: bold;
+      width: 30%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .item-email-style {
+      width: 60%;
+      overflow: hidden;
+    }
+    img {
+      width: 10%;
+    }
+  }
+}
+
+.item.active,
+.item:hover {
+  background: #b1b1b13b;
+}
+
+.item:hover {
+  cursor: pointer;
+}

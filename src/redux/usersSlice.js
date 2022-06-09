@@ -6,7 +6,7 @@ export const fetchUsersData = createAsyncThunk(
   async (thunkAPI, { getState, dispatch }) => {
     try {
       const usersRef = await firestore.collection("users").get();
-      console.log("usersRef", usersRef);
+
       let usersData = [];
       if (!usersRef.empty) {
         for (let i in usersRef.docs) {
@@ -25,8 +25,13 @@ export const usersSlice = createSlice({
   initialState: {
     loading: false,
     usersList: [],
+    selectedUser: "",
   },
-  reducers: {},
+  reducers: {
+    setSelectedUser: (state, action) => {
+      state.selectedUser = action.payload;
+    },
+  },
   extraReducers: {
     [fetchUsersData.pending]: (state, action) => {
       state.loading = true;
@@ -42,4 +47,5 @@ export const usersSlice = createSlice({
   },
 });
 
+export const { setSelectedUser } = usersSlice.actions;
 export default usersSlice.reducer;

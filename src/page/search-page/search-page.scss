@@ -1,0 +1,30 @@
+.search-bar-style {
+  .suggestions-drop-down-style {
+    width: 71.5%;
+    position: absolute;
+    background-color: white;
+    margin-left: 20px;
+    .suggestions-style {
+      font-size: 13px;
+      cursor: pointer;
+      border-right: 1px solid rgb(161, 161, 161);
+      border-left: 1px solid rgb(161, 161, 161);
+      border-bottom: 1px solid rgb(161, 161, 161);
+      padding: 0 10px;
+      .suggestions-result-style {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        .orgName-style {
+          font-weight: bold;
+          width: 30%;
+          overflow: hidden;
+        }
+      }
+    }
+    .suggestions-style:hover {
+      background-color: rgb(216, 216, 216);
+    }
+  }
+}

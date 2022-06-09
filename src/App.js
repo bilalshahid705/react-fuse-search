@@ -1,12 +1,14 @@
 import React from "react";
-import SearchBarComponent from "./components/search-bar";
+import SearchPage from "./page/search-page/search-page";
+import SearchForm from "./page/search-form/search-form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <SearchBarComponent />
+      <SearchPage />
+      <SearchForm />
     </div>
   );
 };
