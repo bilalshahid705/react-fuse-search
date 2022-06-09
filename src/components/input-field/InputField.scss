@@ -1,19 +1,17 @@
 .input {
-  width: 100%;
+  width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 3rem;
   padding-left: 20px;
   border-radius: 50px;
-  background-color: rgba(58, 58, 58, 0.4);
-  margin-top: 1rem;
+  background-color: rgba(208, 208, 208, 0.4);
+  margin: 0 150px 0 150px;
 }
 
 .input_value {
   outline: none;
   border: none;
-  color: rgb(255, 255, 255);
+  color: rgb(96, 96, 96);
   background-color: transparent;
   font-size: 1rem;
   width: 28rem;
@@ -27,6 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #5b5b5b;
   cursor: pointer;
 }

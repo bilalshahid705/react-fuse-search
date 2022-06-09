@@ -1,7 +1,7 @@
 import { FiSearch } from "react-icons/fi";
 import "./InputField.scss";
 
-const InputField = ({ onChange, setSuggestions }) => {
+const InputField = ({ onChange, setSuggestions, inputValue }) => {
   return (
     <form className="input">
       <span className="input_icon">
@@ -12,6 +12,7 @@ const InputField = ({ onChange, setSuggestions }) => {
         placeholder="Search..."
         className="input_value"
         onChange={onChange}
+        value={inputValue}
         onBlur={() => {
           setTimeout(() => {
             setSuggestions([]);

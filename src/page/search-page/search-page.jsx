@@ -13,6 +13,7 @@ const SearchPage = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [cursor, setCursor] = useState(0);
   const [hovered, setHovered] = useState(undefined);
+  const [inputValue, setInputValue] = useState("");
 
   console.log("usersList", usersList);
 
@@ -21,6 +22,7 @@ const SearchPage = () => {
   }, [dispatch]);
 
   const emailFieldChangeHandler = (value) => {
+    setInputValue(value);
     const fuse = new Fuse(usersList, {
       keys: ["email", "name"],
       includeScore: true,
@@ -34,6 +36,7 @@ const SearchPage = () => {
   const suggestionHandler = async (value) => {
     setSuggestions([]);
     dispatch(setSelectedUser(value));
+    setInputValue(value.name);
   };
 
   useEffect(() => {
@@ -49,6 +52,7 @@ const SearchPage = () => {
           <InputField
             onChange={(e) => emailFieldChangeHandler(e.target.value)}
             setSuggestions={setSuggestions}
+            inputValue={inputValue}
           />
           <div className="suggestions-drop-down-style">
             {suggestions.slice(0, 3).map((item, i) => (
